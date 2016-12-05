@@ -50,4 +50,10 @@ public class TeamTest{
     assertEquals(1, team.playerCount());
   }
 
+  @Test
+  public void canReturnStringOfPlayers() {
+    team.subIn(player2);
+    assertEquals("The following players are on court: Michael Beasley.", team.getPlayersOnCourt());
+  }
+
 }

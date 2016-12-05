@@ -11,9 +11,21 @@ class Team {
         return this.name;
     }
 
+    public String getPlayersOnCourt() {
+        String players = new String("The following players are on court: ");
+
+        for (Player player : this.onCourt) {
+            if (player != null) {
+                players = players + player.getName();
+            }
+        }
+
+        return (players + ".");
+    }
+
     public int playerCount() {
         int count = 0;
-        for (Player player : onCourt) {
+        for (Player player : this.onCourt) {
             if (player != null) {
                 count++;
             }
